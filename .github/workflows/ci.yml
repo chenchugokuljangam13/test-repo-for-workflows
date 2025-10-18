@@ -45,7 +45,7 @@ jobs:
         env:
           SESSION_SECRET: notsecure
         run: |
-          node --experimental-vm-modules ./node_modules/jest/bin/jest.js --forceExit --json --outputFile=results.json
+          node --experimental-vm-modules ./node_modules/jest/bin/jest.js --forceExit --json --outputFile=results.json > /dev/null 2>&1
 
       - name: Show Test Summary (Passed/Failed/Total)
         run: |
