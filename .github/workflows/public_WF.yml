@@ -3,6 +3,7 @@ name: Public Tests
 on:
   push:
     branches:
+      - main
       - dev
 
 jobs:
