@@ -46,7 +46,7 @@ jobs:
           SESSION_SECRET: notsecure
         run: |
               npx cross-env SESSION_SECRET=notsecure jest \
-              --ci --injectGlobals=false --forceExit --json --outputFile=results.json > /dev/null 2>&1
+              --ci --injectGlobals=false --forceExit --json --outputFile=results.json 
 
       - name: Show Test Summary (Passed/Failed/Total)
         run: |
