@@ -42,10 +42,7 @@ jobs:
 
       - name: Run unit tests with Jest
         continue-on-error: true
-        env:
-          SESSION_SECRET: notsecure
-        run: |
-          npx jest --ci --forceExit --json --outputFile=results.json > /dev/null 2>&1 
+        run: npm test 
 
       - name: Show Test Summary (Passed/Failed/Total)
         run: |
