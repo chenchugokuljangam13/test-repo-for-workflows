@@ -42,7 +42,10 @@ jobs:
 
       - name: Run unit tests with Jest
         continue-on-error: true
-        run: npm test 
+        env:
+          SESSION_SECRET: notsecure
+        run: |
+          node --experimental-vm-modules ./node_modules/jest/bin/jest.js --forceExit --json --outputFile=results.json
 
       - name: Show Test Summary (Passed/Failed/Total)
         run: |
